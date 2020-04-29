@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-content id="content">
       <router-view></router-view>
 
     </v-content>
@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./scss/variables.scss";
 @font-face {
   font-family: 'TommyBold';
   src:  url(./assets/fonts/MADETommySoftBoldPERSONALUSE.otf) format("opentype");
@@ -36,18 +37,33 @@ export default {
   src: url(assets/fonts/MADETommySoftMediumPERSONALUSE.otf) format("opentype");
 }
 
-h4{
+h1{
   font-family: 'TommyMedium';
   font-size: 93px;
+  width: fit-content;
+  margin: 0;
+  margin-top: 200px;
+  z-index: 2;
 }
-h5{
+h2{
   font-family: 'TommyMedium';
   font-size: 78.2px;
+  width: fit-content;
+  z-index: 2;
 }
-
-#box{
-  width: 100px;
-  height: 20px;
-  background-color: red;
+h3{
+  font-family: 'roboto';
+  font-size: 50px;
+  width: fit-content;
+  z-index: 2;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: map-get($map: $colorz, $key: primary);
 }
 </style>

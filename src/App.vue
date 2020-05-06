@@ -2,7 +2,7 @@
   <v-app>
     <v-content id="content">
       <router-view></router-view>
-
+      
     </v-content>
   </v-app>
 </template>
@@ -17,6 +17,11 @@ export default {
 
 <style lang="scss">
 @import "./scss/variables.scss";
+
+
+
+
+
 @font-face {
   font-family: 'TommyBold';
   src:  url(./assets/fonts/MADETommySoftBoldPERSONALUSE.otf) format("opentype");
@@ -66,4 +71,5 @@ h3{
 ::-webkit-scrollbar-thumb {
   background-color: map-get($map: $colorz, $key: primary);
 }
+
 </style>

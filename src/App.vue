@@ -72,4 +72,17 @@ h3{
   background-color: map-get($map: $colorz, $key: primary);
 }
 
+@media screen and (max-width: 960px) {
+  h1{
+    font-size: 69px;
+  }
+
+  h2{
+    font-size: 58px;
+  }
+
+  h3{
+    font-size: 32px;
+  }
+}
 </style>

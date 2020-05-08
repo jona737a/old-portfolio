@@ -7,14 +7,14 @@
     
     <v-row>
       
-      <v-col cols="8" offset="2">
+      <v-col md="8" offset-md="2" sm="12" offset-sm="0">
         <v-row>
-          <v-col cols="4" offset="2">
+          <v-col cols="4" offset="2" >
             <h2>Informationer om projektet</h2>
           </v-col>
         </v-row>
         <v-row id="tableContainer">
-          <v-col cols="6" offset="2">
+          <v-col md="6" offset-md="2" sm="8" offset-sm="2">
             <table>
               <tr>
                 <td class="column1">Projekttype:</td>
@@ -37,17 +37,27 @@
         </v-row>
         <v-row>
           <v-col id="beskrivelseContainer">
-            <v-col cols="4" offset="2">
+            <v-col id="beskrivelseTitel" cols="4" offset="2">
               <h2>Beskrivelse</h2>
             </v-col>
-            <v-col cols="6" offset="2">
+            <v-col md="6" offset-md="2" sm="8" offset-sm="2">
               <p id="beskrivelse">{{project.description}}</p>
             </v-col>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
-    
+    <div id="footer">
+        
+        <div id="infoContainer">
+          <h4>Contact:</h4>
+          <div class="cInfo"><h5>Email</h5><p>jonathansmadsen@gmail.com</p></div>
+          <div class="cInfo"><h5>CV</h5><a href="https://firebasestorage.googleapis.com/v0/b/portfolio-3e0a9.appspot.com/o/CV%20Jonathan.pdf?alt=media&token=dd8a14a9-9cf6-4ce8-9d38-07294440d290" target="_blank">Hent mit CV</a></div>
+          <div class="cInfo"><h5>Video CV</h5><a href="https://youtu.be/Yg6k4puGykY" target="_blank">Se på YouTube</a></div>
+          <div class="cInfo"><h5>Github</h5><a href="https://github.com/jona737a" target="_blank">Se GitHub</a></div>
+        </div>
+      </div>
+  
   </div>
 </template>
 <script>
@@ -78,8 +88,7 @@ export default {
 #BG{
   z-index: 1;
   position: absolute;
-  width: 100%;
-  background-size: 110%;
+  background-size: cover;
   background-position-x: center;
   background-position-y: -60px;
 }
@@ -107,13 +116,15 @@ margin: 200px 100px 100px 10%;
   z-index: 1;
   position: relative;
   margin-bottom: 60px;
+  background-position-x: center;
+  background-size: cover;
 }
 
 h2{
- 
- font-size: 32px;
- z-index: 2;
+  font-size: 32px;
+  z-index: 2;
   position: relative;
+  margin: 0;
 }
 
 #tableContainer{
@@ -125,7 +136,6 @@ h2{
 table{
   padding-left: 10%;
   height: 300px;
-  width: 600px;
 }
 
 .column1{
@@ -155,6 +165,11 @@ width: 400px;
   flex-flow: column;
   z-index: 2;
   position: relative;
+  height: fit-content;
+}
+
+#beskrivelseTitel{
+  box-sizing: border-box;
 }
 
 #beskrivelse{
@@ -162,5 +177,8 @@ width: 400px;
   align-self: center;
   z-index: 2;
   position: relative;
+  margin-bottom: 200px;
 }
+
+
 </style>

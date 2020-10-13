@@ -1,5 +1,7 @@
 # portfolio
 
+First attempt at a portfolio website.
+
 ## Project setup
 ```
 npm install

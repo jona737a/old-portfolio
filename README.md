@@ -2,6 +2,8 @@
 
 First attempt at a portfolio website.
 
+See live version here https://portfolio-3e0a9.web.app/
+
 ## Project setup
 ```
 npm install
